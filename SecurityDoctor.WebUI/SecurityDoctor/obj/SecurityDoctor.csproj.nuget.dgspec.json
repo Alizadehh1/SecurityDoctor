@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj": {}
+    "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj": {
+    "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj",
+        "projectUniqueName": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj",
         "projectName": "SecurityDoctor",
-        "projectPath": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj",
+        "projectPath": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\SecurityDoctor.csproj",
         "packagesPath": "C:\\Users\\alide\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor.WebUI\\SecurityDoctor\\obj\\",
+        "outputPath": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\alide\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,32 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

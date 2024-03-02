@@ -1,0 +1,71 @@
+﻿<!-- Sticky Footer -->
+<div class="sticky-footer sticky-content fix-bottom">
+    <a asp-action="index" asp-controller="home" class="sticky-link active">
+        <i class="d-icon-home"></i>
+        <span>@@Navbar.Home</span>
+    </a>
+    <a asp-controller="shop" asp-action="index" class="sticky-link">
+        <i class="d-icon-volume"></i>
+        <span>@@Navbar.Shop</span>
+    </a>
+    <a asp-controller="shop" asp-action="wishlist" class="sticky-link">
+        <i class="d-icon-heart"></i>
+        <span>@@Navbar.Wishlist</span>
+    </a>
+    <a asp-controller="account" asp-action="profile" class="sticky-link">
+        <i class="d-icon-user"></i>
+        <span>@@Navbar.Account</span>
+    </a>
+    <div class="header-search hs-toggle dir-up">
+        <a href="#" class="search-toggle sticky-link">
+            <i class="d-icon-search"></i>
+            <span>@@Navbar.Search</span>
+        </a>
+        <form method="get" asp-controller="Shop" asp-action="Search" class="input-wrapper">
+            <input type="text" class="form-control" name="query" placeholder="@@Navbar.Search..." autocomplete="off"
+                   required />
+            <button class="btn btn-search" type="submit">
+                <i class="d-icon-search"></i>
+            </button>
+        </form>
+    </div>
+</div>
+<!-- Scroll Top -->
+<a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+
+<!-- MobileMenu -->
+<div class="mobile-menu-wrapper">
+    <div class="mobile-menu-overlay">
+    </div>
+    <!-- End of Overlay -->
+    <a class="mobile-menu-close" href="#"><i class="d-icon-times"></i></a>
+    <!-- End of CloseButton -->
+    <div class="mobile-menu-container scrollable">
+        <form method="get" asp-controller="Shop" asp-action="Search" class="input-wrapper">
+            <input type="text" class="form-control" name="query" placeholder="Search..." autocomplete="off"
+                   required />
+            <button class="btn btn-search" type="submit">
+                <i class="d-icon-search"></i>
+            </button>
+        </form>
+        <!-- End of Search Form -->
+        <ul class="mobile-menu mmenu-anim">
+            <li>
+                <a asp-action="index" asp-controller="home">Home</a>
+            </li>
+            <li>
+                <a asp-controller="Shop" asp-action="index">Shop</a>
+            </li>
+            <li>
+                <a asp-action="about" asp-controller="home">About us</a>
+            </li>
+        </ul>
+        <!-- End of MobileMenu -->
+         @*<ul class="mobile-menu mmenu-anim">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+        </ul>*@
+        <!-- End of MobileMenu -->
+    </div>
+</div>

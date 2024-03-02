@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SecurityDoctor.Models.DataContexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,17 +15,28 @@ namespace SecurityDoctor
 {
     public class Startup
     {
+        readonly IConfiguration configuration;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddRouting(cfg =>
+            {
+                cfg.LowercaseUrls = true;
+            });
+
+            services.AddDbContext<SecurityDoctorDbContext>(cfg =>
+            {
+                cfg.UseSqlServer(configuration.GetConnectionString("cString"));
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -33,24 +46,27 @@ namespace SecurityDoctor
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthentication();
+            //app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(cfg =>
             {
-                endpoints.MapControllerRoute(
+                cfg.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                cfg.MapAreaControllerRoute(
+                    name: "defaultAdmin",
+                    areaName: "Admin",
+                    pattern: "Admin/{controller=Dashboard}/{action=Index}/{id?}");
+                cfg.MapControllerRoute("default", pattern: "{controller=home}/{action=index}/{id?}");
             });
         }
     }

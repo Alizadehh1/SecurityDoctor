@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SecurityDoctor.Models;
+using SecurityDoctor.Models.DataContexts;
+using SecurityDoctor.WebUI.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,27 +13,39 @@ namespace SecurityDoctor.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly SecurityDoctorDbContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(SecurityDoctorDbContext db)
         {
-            _logger = logger;
+            this.db = db;
         }
 
         public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public async Task<IActionResult> Contact(Contact model)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (!ModelState.IsValid)
+            {
+                return Json(new
+                {
+                    error = true,
+                    message = ModelState.SelectMany(ms => ms.Value.Errors).First().ErrorMessage
+                });
+            }
+            await db.Contacts.AddAsync(model);
+            await db.SaveChangesAsync();
+            return Json(new
+            {
+                error = false,
+                message = "Müraciyyətiniz qeydə alındı!"
+            });
         }
     }
 }
