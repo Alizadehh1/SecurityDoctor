@@ -1,0 +1,360 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>SecurityDoctor - CCTV mağazası</title>
+    <meta name="keywords" content="geyim,paltar, qadin ucun, aksesuar, don, yubka, salvar, şalvar, ayaqqabi" />
+    <meta name="description" content="SecurityDoctor - CCTV mağazası">
+    <meta name="author" content="alizadehh541@gmail.com">
+    <link rel="icon" type="image/png" href="~/assets/images/icons/favicon.png">
+    <script>
+        WebFontConfig = {
+            google: { families: ['Poppins:300,400,500,600,700,800'] }
+        };
+        (function (d) {
+            var wf = d.createElement('script'), s = d.scripts[0];
+            wf.src = '/assets/js/webfont.js';
+            wf.async = true;
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="~/assets/css/demo1.min.css" rel="stylesheet" />
+    <link href="~/libs/toastr.js/toastr.css" rel="stylesheet" />
+    <link href="~/admin/files/assets/css/customize.css" rel="stylesheet" />
+    @RenderSection("css", required: false)
+    <link href="~/assets/css/style.min.css" rel="stylesheet" />
+</head>
+<body class="home">
+    <div class="page-wrapper">
+        <h1 class="d-none">SecurityDoctor - CCTV mağazası</h1>
+        <header class="header">
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-left">
+                        <p class="welcome-msg">Security Doctor ecommerce səhifəsinə xoş gəlmisiz</p>
+                    </div>
+                    <div class="header-right">
+                        <span class="divider"></span>
+                        <a asp-action="contact" asp-controller="home" class="contact d-lg-show"><i class="d-icon-map"></i>Contact</a>
+                        <a asp-action="faq" asp-controller="home" class="help d-lg-show"><i class="d-icon-info"></i> FAQs</a>
+                        @*@@if (User.Identity.IsAuthenticated)
+                        {*@
+                            @*<a asp-action="Profile" asp-controller="account">
+                                <i style="margin-right: 3px;" class="d-icon-user"></i>@@User.GetPrincipalName()
+                            </a>*@
+                        @*}
+                        else
+                        {*@
+                            <a asp-action="SignIn" asp-controller="account">
+                                <i style="margin-right: 3px;" class="d-icon-user"></i>Signin
+                            </a>
+                            <span class="delimiter" style="display:flex!important">/</span>
+                            <a class="ml-0" asp-action="Register" asp-controller="account">Register</a>
+                        @*}*@
+                    </div>
+                </div>
+            </div>
+            <div class="header-middle sticky-header fix-top sticky-content">
+                <div class="container">
+                    <div class="header-left">
+                        <a href="#" class="mobile-menu-toggle">
+                            <i class="d-icon-bars2"></i>
+                        </a>
+                        <a asp-action="index" asp-controller="home" class="logo">
+                            <img src="~/assets/images/logo.png" alt="firlansaLogo" width="153" height="44" />
+                        </a>
+                        <div class="header-search hs-simple">
+                            <form method="get" asp-controller="Shop" asp-action="Search" class="input-wrapper">
+                                <input type="text" class="form-control" name="query" placeholder="Search..." autocomplete="off"
+                                       required />
+                                <button class="btn btn-search" type="submit">
+                                    <i class="d-icon-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <a href="tel:+994513614581" class="icon-box icon-box-side">
+                            <div class="icon-box-icon mr-0 mr-lg-2">
+                                <i class="d-icon-phone"></i>
+                            </div>
+                            <div class="icon-box-content d-lg-show">
+                                <h4 class="icon-box-title">Əlaqə Nömrəsi</h4>
+                                <p>+994513614581</p>
+                            </div>
+                        </a>
+                        <span class="divider"></span>
+                        <a asp-action="wishlist" asp-controller="shop" class="wishlist">
+                            <i class="d-icon-heart"></i>    
+                        </a>
+                        <span style="margin-left:1rem;" class="divider"></span>
+                        <div class="dropdown cart-dropdown type2 cart-offcanvas mr-0 mr-lg-2">
+                            <a href="#" class="cart-toggle label-block link">
+                                <i class="d-icon-bag"><span class="cart-count">2</span></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-bottom d-lg-show">
+                <div class="container">
+                    <div class="header-left">
+                        <partial name="_Navbar" />
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            @RenderBody()
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3">
+                            <a asp-action="index" asp-controller="home" class="logo-footer">
+                                <img src="~/assets/images/logo-footer.png" alt="logo-footer" width="154" height="43" />
+                            </a>
+                        </div>
+                        <div class="col-lg-9">
+                            <div class="widget widget-newsletter form-wrapper form-wrapper-inline">
+                                <div class="newsletter-info mx-auto mr-lg-2 ml-lg-4">
+                                    <h4 class="widget-title">Discounts</h4>
+                                </div>
+                                <form method="post" id="subscribeForm" class="input-wrapper input-wrapper-inline">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="Enter your email...." required />
+                                    <button id="btnSubs" class="btn btn-primary btn-rounded btn-md ml-2" type="submit">
+                                        Subscribe<i class="d-icon-arrow-right"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- End Newsletter -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End FooterTop -->
+                <div class="footer-middle">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget widget-info">
+                                <h4 class="widget-title">Contact Info</h4>
+                                <ul class="widget-body">
+                                    <li>
+                                        <label>Phone Number:</label>
+                                        <a href="tel:+994513614581">+994 51 361 45 81</a>
+                                    </li>
+                                    <li>
+                                        <label>Email</label>
+                                        <a href="mailto:mail@SecurityDoctor.com">mail@SecurityDoctor.com</a>
+                                    </li>
+                                    <li>
+                                        <label>Address:</label>
+                                        <a href="#">Online</a>
+                                    </li>
+                                    <li>
+                                        <label>Working hours</label>
+                                    </li>
+                                    <li>
+                                        <a href="#">9:00 AM - 8:00 PM</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+                        <partial name="_FooterNavbar" />
+
+                    </div>
+                </div>
+                <!-- End FooterMiddle -->
+                <div class="footer-bottom">
+                    <div class="footer-left">
+                        <figure class="payment">
+                            <img src="~/assets/images/payment.png" alt="payment" width="159" height="29" />
+                        </figure>
+                    </div>
+                    <div class="footer-center">
+                        <p class="copyright">Bütün Hüquqlar qorunur</p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/firlansa.baku/" class="fa-brands fa-instagram social-link social-instagram"></a>
+                            <a href="@@linkTiktok" class="social-link social-tiktok fa-brands fa-tiktok"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- End FooterBottom -->
+            </div>
+        </footer>
+        <!-- End Footer -->
+    </div>
+    <partial name="_MobileMenu" />
+
+    <script src="~/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/assets/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script src="~/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="~/libs/toastr.js/toastr.min.js"></script>
+    <script src="~/assets/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/jquery.plugin/jquery.plugin.min.js"></script>
+    <script src="~/assets/vendor/jquery.countdown/jquery.countdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js" integrity="sha512-3j3VU6WC5rPQB4Ld1jnLV7Kd5xr+cq9avvhwqzbH/taCRNURoeEpoPBK9pDyeukwSxwRPJ8fDgvYXd6SkaZ2TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="~/assets/js/main.min.js"></script>
+    <script src="~/admin/files/assets/js/customize.js"></script>
+    @*<script>
+        let btn = document.getElementById('btnSubs');
+        $(document).ready(function () {
+            $('#subscribeForm').submit(function (e) {
+                e.preventDefault();
+                let formData = new FormData(e.currentTarget);
+                btn.disabled = true;
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Subscribe", "Home")",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.error == true) {
+                            e.currentTarget.reset();
+                            btn.disabled = false;
+                            toastr.error(response.message, 'Texniki xeta bash verdi!');
+                            return;
+                        }
+                        e.currentTarget.reset();
+                        btn.disabled = false;
+                        toastr.success(response.message, 'Subscribe confirmation sended to your mail');
+                    },
+                    error: function (response) {
+                        toastr.error(response.message, "Texniki Xeta!");
+                        btn.disabled = false;
+                    }
+
+                });
+            });
+
+            const lang = `@Context.GetCurrentCulture()`;
+
+            const selectedLangText = $(`[data-lang="${lang}"`).text();
+
+            $(`[data-lang-viewer="language"]`).text(selectedLangText);
+
+            $('[data-lang]').click(function (e) {
+                e.preventDefault();
+
+                let path = `${window.location.pathname}${window.location.search}`;
+                let selectedLang = $(e.currentTarget).data('lang');
+
+                let result = /\/(en|az|ru)?\/?(.*)?/.exec(path);
+
+                if (result != null && result[2] != undefined) {
+                    path = `/${selectedLang}/${result[2]}`;
+                }
+                else if (result != null) {
+                    path = `/${selectedLang}`;
+                }
+
+                window.location.href = path;
+            })
+        });
+
+        function readFromBasket() {
+            return ($.cookie('cards') || '').split(',');
+        }
+        function readFromBasketColor() {
+            return ($.cookie('colors') || '').split(',');
+        }
+        function readFromBasketSize() {
+            return ($.cookie('sizes') || '').split(',');
+        }
+        function readFromBasketColorAndSize() {
+            return ($.cookie('colorAndSizes') || '').split(',');
+        }
+        function readFromBasketQty() {
+            return ($.cookie('qtys') || '').split(',');
+        }
+        function removeEntity1(entityId, entityColor, entitySize, entityQty, ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+            console.log(ev.currentTarget)
+            let items = readFromBasket();
+            let colors = readFromBasketColor();
+            let sizes = readFromBasketSize();
+            let colorsAndSizes = readFromBasketColorAndSize();
+            let qtys = readFromBasketQty();
+            let id = entityId.toString();
+            let button = ev.currentTarget;
+            let priceBox = $(button).parent().next().find("div");
+            let deletingPrice = parseFloat($(priceBox).find("span.product-price").html()).toFixed(2);
+            let deletinCount = parseFloat($(priceBox).find("span.product-quantity").html()).toFixed(2);
+            const index = items.indexOf(id);
+            if (index > -1) {
+                items.splice(index, 1);
+                colors.splice(index, 1);
+                sizes.splice(index, 1);
+                colorsAndSizes.splice(index, 1);
+                qtys.splice(index, 1);
+            }
+            $.cookie('cards', items.toString(), { expires: 7, path: '/' });
+            $.cookie('colors', colors.toString(), { expires: 7, path: '/' });
+            $.cookie('sizes', sizes.toString(), { expires: 7, path: '/' });
+            $.cookie('qtys', qtys.toString(), { expires: 7, path: '/' });
+            $.cookie('colorAndSizes', colorsAndSizes.toString(), { expires: 7, path: '/' });
+            if (items.length > 1) {
+                let deletingSubtotal = deletingPrice * deletinCount;
+                let previousSubtotal = parseFloat($("div.cart-total span.price").html()).toFixed(2);
+                $("div.cart-total span.price").html((previousSubtotal - deletingSubtotal).toFixed(2));
+                console.log(previousSubtotal);
+                console.log($("div.cart-total span.price").html(previousSubtotal - deletingSubtotal));
+            }
+            $.ajax({
+                success: function (response) {
+                    if (response.error == true) {
+                        toastr.error(response.message, "Error!");
+                        return;
+                    }
+                    toastr.success("Successfully Deleted", response.message)
+                    $(`div[data-specification=${entityId}-${entityColor}-${entitySize}]`).remove();
+                    if (window.location.pathname == "/shop/basket") {
+                        $(`tr[data-specification=${entityId}-${entityColor}-${entitySize}]`).remove();
+                    }
+                    showCardCount();
+                    checkCartEmpty();
+                },
+                error: function (response) {
+                    toastr["error"]("Unsuccessfully", "Data has not been deleted")
+                }
+            })
+        }
+        function checkCartEmpty() {
+            let items = readFromBasket();
+            var divContainer = $('<div>', {
+                class: 'd-flex justify-content-center align-items-center'
+            });
+            var h2Tag = $('<h2>').text("Səbət Boşdur").css("margin-top", "20px");
+            let divTag = $('div.dropdown-box');
+
+            /* $('div.step-by').remove();*/
+            if (items.length <= 1) {
+                $('div.cart-total').html("").css("margin", "0px").css("padding", "0px");
+                $('div.cart-action').html("");
+                h2Tag.appendTo(divContainer);
+                divContainer.appendTo(divTag);
+                //$('div.emptyBasketContainer').parent().removeClass("col-lg-8");
+                //$('div.emptyBasketContainer').parent().addClass("col-lg-12");
+            }
+        }
+    </script>*@
+    @RenderSection("js", required: false)
+
+</body>
+</html>

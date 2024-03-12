@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\models\\datacontexts\\securitydoctordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\models\\datacontexts\\securitydoctordbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\models\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\models\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\views\\shop\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\controllers\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|c:\\users\\alide\\onedrive\\desktop\\securitydoctor\\securitydoctor.webui\\securitydoctor\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CC69D393-58D9-4FD0-8183-FD39E286F7A4}|SecurityDoctor\\SecurityDoctor.csproj|solutionrelative:securitydoctor\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SecurityDoctorDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Models\\DataContexts\\SecurityDoctorDbContext.cs",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Models\\DataContexts\\SecurityDoctorDbContext.cs",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Models\\DataContexts\\SecurityDoctorDbContext.cs",
+              "RelativeToolTip": "SecurityDoctor\\Models\\DataContexts\\SecurityDoctorDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T00:12:54.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Models\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Models\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Models\\Entities\\Category.cs",
+              "RelativeToolTip": "SecurityDoctor\\Models\\Entities\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T00:12:29.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Shop\\Index.cshtml",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Views\\Shop\\Index.cshtml",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Shop\\Index.cshtml",
+              "RelativeToolTip": "SecurityDoctor\\Views\\Shop\\Index.cshtml",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T23:25:46.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Controllers\\ShopController.cs",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Controllers\\ShopController.cs",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Controllers\\ShopController.cs",
+              "RelativeToolTip": "SecurityDoctor\\Controllers\\ShopController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T23:25:08.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "SecurityDoctor\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABcAAAAAAAAAAAAuwCYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T23:04:22.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "SecurityDoctor\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T23:03:43.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Faq.cshtml",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Home\\Faq.cshtml",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Views\\Home\\Faq.cshtml",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Views\\Home\\Faq.cshtml",
+              "RelativeToolTip": "SecurityDoctor\\Views\\Home\\Faq.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-11T23:03:26.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SecurityDoctor\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\alide\\OneDrive\\Desktop\\SecurityDoctor\\SecurityDoctor.WebUI\\SecurityDoctor\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SecurityDoctor\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAQwDIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T23:02:53.776Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

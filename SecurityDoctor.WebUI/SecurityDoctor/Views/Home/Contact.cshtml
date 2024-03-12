@@ -1,0 +1,124 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "Contact";
+    var linkTiktok = "https://www.tiktok.com/@firlansa.baku1";
+}
+
+<nav class="breadcrumb-nav">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li><a asp-action="index"><i class="d-icon-home"></i></a></li>
+            <li>Əlaqə</li>
+        </ul>
+    </div>
+</nav>
+<div class="page-header" style="background-image: url(/assets/images/page-header/contact-us.jpg)">
+    <h1 class="page-title font-weight-bold text-capitalize ls-l">Bizimlə Əlaqə</h1>
+</div>
+<div class="page-content mt-10 pt-7">
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 ls-m mb-4">
+                    <div class="grey-section d-flex align-items-center h-100">
+                        <div>
+                            @*<h4 class="mb-2 text-capitalize">@Recources.ContactForm.Branch</h4>
+                            <p>@Recources.ContactForm.May_28__opposite_the_Nasimi_district_police_department_</p>*@
+
+                            <h4 class="mb-2 text-capitalize">Əlaqə Nömrəsi</h4>
+                            <p>
+                                <a href="tel:+994513614581">(051)361-45-81</a><br>
+                            </p>
+
+                            <h4 class="mb-2 text-capitalize">Dəstək</h4>
+                            <p class="mb-4">
+                                <a href="#">support@your-domain.com</a><br>
+                                <a href="#">help@your-domain.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-6 d-flex align-items-center mb-4">
+                    <div class="w-100">
+                        <form class="pl-lg-2" id="contactForm" method="post">
+                            <h4 class="ls-m font-weight-bold">Bizimlə Əlaqə</h4>
+                            <p>
+                                E-poçt ünvanınız dərc olunmayacaq. Tələb olunan sahələr qeyd olunub
+                            </p>
+                            <div class="row mb-2">
+                                <div class="col-12 mb-4">
+                                    <textarea asp-for="Comment" class="form-control" required
+                                              placeholder="Rəy*"></textarea>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input asp-for="Name" class="form-control" type="text" placeholder="Ad *" required>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <input asp-for="Email" class="form-control" type="email" placeholder="Email *" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-dark btn-rounded">
+                                Göndər<i class="d-icon-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section-->
+
+    @*<section class="store-section mt-6 pt-10 pb-8">
+        <div class="container">
+            <h2 class="title title-center mb-7 text-normal">@Recources.ContactForm.Our_Store</h2>
+            <div class="row cols-sm-2 cols-lg-4 justify-content-center">
+                <div class="store">
+                    <figure class="banner-radius">
+                        <img src="~/assets/images/subpages/2022-07-12.jpg" alt="store" width="280" height="280">
+                        <h4 class="overlay-visible">@Recources.ContactForm.Baku</h4>
+                        <div class="overlay overlay-transparent">
+                            <a class="mt-8" href="mail:#">mail@firlansastore.com</a>
+                            <a href="tel:#">@Recources.ContactForm.Phone: (051)623-91-07</a>
+                            <div class="social-links mt-1">
+                                <a href="https://www.instagram.com/firlansa.baku/" class="fa-brands fa-instagram social-link social-instagram"></a>
+                                <a href="@linkTiktok" class="social-link social-tiktok fa-brands fa-tiktok"></a>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.5139896371159!2d49.84346271825332!3d40.38607249484273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d74cd016105%3A0xcc30583219957fb!2zTsmZc2ltaSBSYXlvbiBQb2xpcyDEsGRhcsmZc2k!5e0!3m2!1sen!2saz!4v1678704148145!5m2!1sen!2saz" height="386" style="border:0;width:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>*@
+</div>
+@section css{
+    <link href="~/assets/css/demo23.min.css" rel="stylesheet" />
+}
+@section js{
+    <script>
+        $(document).ready(function () {
+            $('#contactForm').submit(function (e) {
+                e.preventDefault();
+                let formData = new FormData(e.currentTarget);
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Contact")",
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.error == true) {
+                            toastr.error(response.message, 'Error!');
+                            return;
+                        }
+                        toastr.success(response.message, 'Success!');
+
+                        e.currentTarget.reset();
+                    }
+                });
+            });
+        });
+
+    </script>
+}
+
