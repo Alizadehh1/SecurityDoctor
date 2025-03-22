@@ -25,7 +25,7 @@
 
 - **Backend:** C# with ASP.NET MVC
 - **Frontend:** HTML, CSS, JavaScript
-- **Database:** SQL Server (or compatible RDBMS)
+- **Database:** SQL Server
 - **Architecture:** MVC Pattern
 
 ---
